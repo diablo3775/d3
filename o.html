@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://unpkg.com/d3-milestones/build/d3-milestones.css">
+<script src="https://unpkg.com/d3-milestones/build/d3-milestones.min.js"></script>
+<div id="timeline"></div>
+<script>
+  milestones('#timeline')
+    .mapping({
+      'timestamp': 'year',
+      'text': 'title'
+    })
+    .parseTime('%Y')
+    .aggregateBy('year')
+    .render([
+        { year: 789, title: 'Vikings begin attacks on England.' },
+        { year: 840, title: 'Vikings found Dublin in Ireland.' },
+        { year: 860, title: 'Rus Vikings attack Constantinople.' },
+        { year: 866, title: 'Danish Vikings establish a kingdom in York, England.' },
+        { year: 871, title: 'Danish advance is halted in England.' },
+        { year: 872, title: 'Harald I gains control of Norway.' },
+        { year: 900, title: 'The Vikings raid along the Mediterranean coast.' },
+        { year: 911, title: 'The Viking chief Rollo founds Normandy in France.' },
+        { year: 941, title: 'Rus Vikings attack Constantinople.' },
+        { year: 981, title: 'Viking leader Erik the Red discovers Greenland.' }
+    ]);
+
+</script>
